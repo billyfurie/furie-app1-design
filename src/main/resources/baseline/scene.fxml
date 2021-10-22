@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2a2a2a;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="List">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Show All Tasks" />
+                        <MenuItem mnemonicParsing="false" text="Show Completed Tasks" />
+                        <MenuItem mnemonicParsing="false" text="Show Uncompleted Tasks" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tasks">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Collapse All Tasks" />
+                        <MenuItem mnemonicParsing="false" text="Open All Tasks" />
+                        <MenuItem mnemonicParsing="false" text="Complete Selected" />
+                        <MenuItem mnemonicParsing="false" text="Remove Selected" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="200.0" style="-fx-background-color: black;" stylesheets="@styles.css" vbarPolicy="NEVER">
+            <content>
+                <VBox prefHeight="24.0" styleClass="ListsPane">
+                    <children>
+                        <StackPane stylesheets="@styles.css">
+                            <children>
+                                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="ListsPaneTitle" text="Lists" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Button id="CloseListsViewPane" fx:id="closeListsViewPane" alignment="CENTER_RIGHT" mnemonicParsing="false" stylesheets="@styles.css" text="Close" StackPane.alignment="CENTER_RIGHT" />
+                            </children>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button12" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="58.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button121" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button1211" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button12111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button121111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button12112" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="178.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button121121" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="202.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button1211211" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="226.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button12112111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button121121111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="274.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button1211211111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="298.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button12112111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="322.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button121121111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="346.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button1211211111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="370.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button12112111111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="394.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button121121111111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="418.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button1211211111111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="442.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button12112111111111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="466.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button121121111111111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                        <StackPane alignment="CENTER_RIGHT" layoutX="10.0" layoutY="490.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" stylesheets="@styles.css">
+                            <children>
+                                <Button maxHeight="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="22.0" styleClass="Button" stylesheets="@styles.css" text="..." />
+                                <Button fx:id="button1211211111111111111" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" styleClass="Button" stylesheets="@styles.css" text="List Title">
+                                    <padding>
+                                        <Insets left="32.0" />
+                                    </padding>
+                                </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="ListStack" />
+                                <String fx:value="ListsPaneItem" />
+                            </styleClass>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </left>
+    <center>
+        <GridPane style="-fx-background-color: #2a2a2a;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="196.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="148.0" prefHeight="148.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                    <children>
+                        <VBox>
+                            <VBox.margin>
+                                <Insets left="8.0" right="8.0" top="8.0" />
+                            </VBox.margin>
+                            <children>
+                                <HBox maxWidth="1.7976931348623157E308">
+                                    <children>
+                                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="38.0" promptText="Enter a task to add to your list..." style="-fx-background-color: #383838; -fx-text-fill: white;" HBox.hgrow="ALWAYS">
+                                            <font>
+                                                <Font name="System Italic" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="8.0" />
+                                            </HBox.margin>
+                                        </TextField>
+                                        <TextField layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="38.0" promptText="Enter the due date..." style="-fx-background-color: #383838; -fx-text-fill: white;" HBox.hgrow="ALWAYS">
+                                            <font>
+                                                <Font name="System Italic" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="8.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="38.0" promptText="Enter a description for your list..." style="-fx-background-color: #383838; -fx-text-fill: white;">
+                                    <font>
+                                        <Font name="System Italic" size="14.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="8.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Button id="CreateTaskButton" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="38.0" stylesheets="@styles.css" text="Create Task" VBox.vgrow="ALWAYS">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <HBox>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="8.0" top="24.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label alignment="CENTER" styleClass="ListTitleName" stylesheets="@styles.css" text="List Title">
+                                    <font>
+                                        <Font size="36.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxWidth="1.7976931348623157E308" style="-fx-background-color: transparent;" stylesheets="@styles.css">
+                            <content>
+                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #2a2a2a;">
+                                    <children>
+                                        <StackPane>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </StackPane>
+                                        <StackPane layoutX="18.0" layoutY="18.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="75.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="124.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="173.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="222.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="271.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="320.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="369.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="418.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="467.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                        <StackPane layoutX="10.0" layoutY="516.0">
+                                            <children>
+                                                <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" style="-fx-border-width: 0;" styleClass="TitledPane" stylesheets="@styles.css" text="Task" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <content>
+                                                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="196.0" prefWidth="200.0" style="-fx-background-color: #2a2a2a;" stylesheets="@styles.css" text="Dynamically adjust this size based on description length" wrapText="true" />
+                                                    </content>
+                                                </TitledPane>
+                                                <Label styleClass="TitleDueDate" stylesheets="@styles.css" text="2021-11-05" StackPane.alignment="TOP_RIGHT">
+                                                    <StackPane.margin>
+                                                        <Insets right="16.0" top="10.0" />
+                                                    </StackPane.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" />
+                                            </VBox.margin>
+                                        </StackPane>
+                                    </children>
+                                    <padding>
+                                        <Insets top="8.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="12.0" left="16.0" right="16.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+</BorderPane>
