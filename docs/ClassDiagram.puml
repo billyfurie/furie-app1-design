@@ -1,0 +1,130 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class FXMLController {
+    -ScrollPane ListsPane
+    -ScrollPane TasksPane
+    -ToDoListContainerControl listContainerControl
+    -ToDoListControl currentListControl
+
+    + void setCurrentToDoList(ToDoListControl listControl)
+    + void updateTaskView()
+    + void selectTask(Task task)
+    + void addTask()
+    + void removeTask(Task task)
+    + void removeSelectedTasks()
+    + void openAllTasks()
+    + void collapseAllTasks()
+    + void addToDoList()
+    + void removeToDoList(ToDoListControl toDoListControl)
+}
+
+class Task {
+    -String title
+    -String description
+    -Date dueDate
+
+    + void editDescription(String newDescription)
+    + void editDueDate(String newDueDate)
+    ' set whether the task is collapsed or not
+    + String getTitle()
+    + String getDescription()
+    + Date getDueDate()
+}
+
+class ToDoList {
+    -String title
+    -int taskCapacity // constant
+    -ArrayList<Task> tasksList
+    -ArrayList<Task> selectedTasks
+    -ArrayList<Task> completedTasks
+    -ArrayList<Task> incompleteTasks
+
+    + void addTask(Task task)
+    + void removeTask(Task task)
+    + void completeTask(Task task)
+    + void editTitle(String newTitle)
+    + void toggleSelectTask(Task task)
+    ' these are for showing the different tasks in our TaskEditor view
+    + ArrayList<Task> getAllTasks()
+    + ArrayList<Task> getIncompleteTasks()
+    + ArrayList<Task> getCompletedTasks()
+    + ArrayList<Task> getSelectedTasks()
+    + void collapseAllTasks()
+    + void openAllTasks()
+    + String getTitle()
+}
+
+class ToDoListContainer {
+    -ArrayList<ToDoList> container
+    -int listCapacity // constant
+
+    + void addToDoList(ToDoList toDoList)
+    + void removeToDoList(ToDoList toDoList)
+    + ArrayList<ToDoList> getContainer()
+}
+
+' control object for list in left pane
+class ToDoListControl extends StackPane {
+    ' button for going to this list
+    -Button listButton
+    ' button for options in this list
+    -Button optionsButton
+    ' ToDoList model
+    -ToDoList toDoList
+    ' store the Task Container for this toDoList
+    -TaskContainerControl taskContainerControl
+
+
+    +void addTask(String title, String description, String dueDate)
+    +void removeTask(Task task)
+    +void removeSelected()
+    +void selectTask(Task task)
+    +TaskContainerControl getTaskContainerControl()
+    +ToDoList getToDoList()
+    +void openAllTasks()
+    +void collapseAllTasks()
+    +void editListTitle(String newTitle)
+
+    ' return the ToDoList
+    +getToDoList()
+}
+
+class TaskContainerControl extends Vbox {
+    -ArrayList<TaskControl>
+    +void addTaskControl(TaskControl control)
+    +void removeTaskControl(Task task)
+}
+
+class TaskControl extends StackPane {
+    -Task task
+    -TitledPane taskTitledPane
+    -TextArea descriptionText
+    -Label dueDate
+    -Button selectButton
+
+    +void setCollapsed(boolean collapsed)
+    +Task getTask()
+    +void select()
+}
+
+class ToDoListContainerControl extends Vbox {
+    -ToDoListContainer container
+    +addToDoList(String name)
+    +removeToDoList(ToDoList toDoList)
+}
+
+class FileManager {
+    + void saveListsToFile(ToDoListContainer container, String filePath)
+    + ToDoListContainer loadListsFromFile()
+    - String getListFormatted(ToDoList toDoList)))
+}
+
+ToDoList *-- Task : contains list of
+ToDoListContainer *-- ToDoList : contains list of
+ToDoListContainerControl *-- ToDoListContainer: contains 1
+TaskContainerControl *-- TaskControl: contains list of
+ToDoListControl *-- ToDoList: contains 1
+TaskControl *-- Task: contains 1
+ToDoListControl *-- TaskContainerControl: contains 1
+@enduml
